@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 9e5f8ed9d82168140b54222273e78a6d
+guid: 8b056214474f4a144a73ded69e4a8a71
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: enemy_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 110
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,31 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: enemy_0
-      rect:
-        serializedVersion: 2
-        x: 338
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7a7a51afe08ccb44a0c1040accea838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 622d13e2fe4c3a248b26b3f13518b9fd
+    spriteID: b19a57ebdaeea7d4f98391a4e9dd1166
     vertices: []
     indices: 
     edges: []

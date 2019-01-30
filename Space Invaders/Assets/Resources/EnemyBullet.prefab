@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4885341393151541139}
   - component: {fileID: 2405613388887842142}
-  - component: {fileID: 4795779900345250843}
+  - component: {fileID: 6585449455287937680}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Bullet
+  m_Name: EnemyBullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c82d3a8defc73fe468c4b1d4592cee6c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.52743673, b: 0.24056602, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4795779900345250843
+--- !u!114 &6585449455287937680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8357396490305512463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ed62846acf33845b4b09fe49198afb, type: 3}
+  m_Script: {fileID: 11500000, guid: c9f1a0f6d08c32c428fd4e8cb225b0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10

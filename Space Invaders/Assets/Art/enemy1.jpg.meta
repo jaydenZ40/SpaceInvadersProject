@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 9e5f8ed9d82168140b54222273e78a6d
+guid: 9a72e3cf59bd76f4ebd97e99f24df96a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: enemy_0
+    21300000: enemy1_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 220
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_0
+      name: enemy1_0
       rect:
         serializedVersion: 2
-        x: 338
-        y: 20
-        width: 64
-        height: 64
+        x: 50
+        y: 59
+        width: 220
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7a7a51afe08ccb44a0c1040accea838
+      spriteID: e6f089af14aedd44c9a57db52c56482b
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 622d13e2fe4c3a248b26b3f13518b9fd
+    spriteID: 2f9ae5ec94688bd40bf2476f38215882
     vertices: []
     indices: 
     edges: []
