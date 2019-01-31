@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public static bool isFiring = false;
     public static bool enemyIsFiring = false;
     public static bool isGameOver = false;
-    public static bool isShot = false; // shotByEnemy()
-    public static int score = 0; // add hitEnemy later
+    public static int score = 0;
+    public static int lives = 3;
     void Start()
     {
         rb = this.transform.GetComponent<Rigidbody2D>();
@@ -37,7 +37,22 @@ public class PlayerController : MonoBehaviour
         }
         if (isGameOver)
         {
-            SceneManager.LoadScene(3);
+            isGameOver = false;
+            SceneManager.LoadScene(2);
+        }
+        Physics2D.IgnoreLayerCollision(8, 9);  // ignore the collision between player and enemies
+    }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            lives--;
+            if (lives == 0)
+            {
+                isGameOver = true;
+            }
+            Destroy(other.gameObject);
+            rb.transform.position = new Vector3(0, -8.5f, 0);
         }
     }
 }

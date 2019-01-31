@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Bullet
   - EnemyBullet
+  - LeftBorder
+  - RightBorder
+  - LowerBorder
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - player
+  - enemy
   - 
   - 
   - 

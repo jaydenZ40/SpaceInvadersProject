@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBulletMovement : MonoBehaviour
 {
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 15f;
     void Update()
     {
         this.transform.Translate(new Vector3(0, Time.deltaTime * bulletSpeed));

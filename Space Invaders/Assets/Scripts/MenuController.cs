@@ -9,6 +9,9 @@ public class MenuController : MonoBehaviour
     }
     public void Restart()
     {
+        PlayerController.score = 0;
+        PlayerController.lives = 3;
+        PlayerController.isGameOver = false;
         SceneManager.LoadScene(1);
     }
     public void Quit()

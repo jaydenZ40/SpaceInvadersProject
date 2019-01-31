@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758619852476986037}
   - component: {fileID: 5027368134510440638}
+  - component: {fileID: 155402238124564067}
   - component: {fileID: 3119396053794802981}
   m_Layer: 0
   m_Name: enemyRow45
@@ -80,6 +81,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &155402238124564067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890660566971491621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea26e3427df7e44498e5431d6f87ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 10
+  EnemyBullet: {fileID: 8357396490305512463, guid: 5cb9d5b1dde73dc4f8f94e911b84d8ca,
+    type: 3}
 --- !u!61 &3119396053794802981
 BoxCollider2D:
   m_ObjectHideFlags: 0
