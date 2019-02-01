@@ -30,9 +30,10 @@ public class EnemyFiringController : MonoBehaviour
     void randomFire()
     {
         int maxCol = 11;
-        int row = -1, col = Random.Range(0, maxCol);
+        int row = -1, col = 0;
         while (row == -1 && maxCol > 0)
         {
+            col = Random.Range(0, maxCol);
             for (int i = 4; i >= 0; i--)
             {
                 if (aliveEnemies[i][col])
@@ -41,11 +42,10 @@ public class EnemyFiringController : MonoBehaviour
                     break;
                 }
             }
-            maxCol--;
-            col = Random.Range(0, maxCol);
+            maxCol--; 
         }
-        print("col:" + col + ", row:" + row);
+        print("(" + row + "," + col + "), " + aliveEnemies[row][col]); // for testing only
         // randomly pick a column to fire, check if there is an enemy in this colmun. If not, try another column.
-        transform.GetChild(col).GetChild(row).GetComponent<EnemyController>().Invoke("isChosenToFire", 0);
+        transform.GetChild(col).GetChild(row).GetComponent<EnemyController>().Invoke("isChosenToFire", 0f);
     }
 }

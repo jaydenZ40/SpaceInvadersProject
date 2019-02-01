@@ -17,12 +17,12 @@ public class EnemyController : MonoBehaviour
             points = 10;
 
         string str = this.transform.parent.name;
+        column = str[str.Length - 1] - '0';
         if (str[str.Length - 1] == '0')
             column = 10;
         else if (str[str.Length - 1] == '1')
             if (str[str.Length - 2] == '1')
                 column = 11;
-        column = str[str.Length - 1] - '0';
         // get the column by the last character of name. If last character is 0 or 1, check the previous character.
     }
     public void isChosenToFire()
@@ -37,6 +37,10 @@ public class EnemyController : MonoBehaviour
             EnemyFiringController.aliveEnemies[row - 1][column - 1] = false;
             PlayerController.score += points;
             Destroy(other.gameObject);
+            if (this.transform.parent.childCount == 1)
+            {
+                Destroy(this.transform.parent.gameObject);
+            }
             Destroy(this.gameObject);
             PlayerController.isFiring = false;
         }
