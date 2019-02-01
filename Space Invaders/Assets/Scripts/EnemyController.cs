@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            EnemyFiringController.aliveEnemies[row - 1][column - 1] = false;
+            //EnemyFiringController.aliveEnemies[row - 1][column - 1] = false;
             PlayerController.score += points;
             Destroy(other.gameObject);
             if (this.transform.parent.childCount == 1)

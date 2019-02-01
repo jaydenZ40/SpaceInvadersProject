@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class EnemyFiringController : MonoBehaviour
 {
-    public static bool[][] aliveEnemies = new bool[5][];
     private float timer = 0;
     private float nextFire = 0;
-    
-    void Start()
-    {
-        for (int i = 0; i < 5; i++)
-            aliveEnemies[i] = new bool[11];
-        for (int i = 0; i < 5; i++)
-            for (int j = 0; j < 11; j++)
-                aliveEnemies[i][j] = true;
-        // a 5*11 boolean array represents the enemies, the value is true if the enemy is alive
-    }
 
     void Update()
     {
@@ -29,23 +18,12 @@ public class EnemyFiringController : MonoBehaviour
     }
     void randomFire()
     {
-        int maxCol = 11;
-        int row = -1, col = 0;
-        while (row == -1 && maxCol > 0)
-        {
-            col = Random.Range(0, maxCol);
-            for (int i = 4; i >= 0; i--)
-            {
-                if (aliveEnemies[i][col])
-                {
-                    row = i;
-                    break;
-                }
-            }
-            maxCol--; 
-        }
-        print("(" + row + "," + col + "), " + aliveEnemies[row][col]); // for testing only
-        // randomly pick a column to fire, check if there is an enemy in this colmun. If not, try another column.
+        int col, row;
+        int curColumnNumber = transform.childCount;
+        col = Random.Range(0, curColumnNumber); // choose a random column to fire
+        int curRowNumber = transform.GetChild(col).transform.childCount;
+        row = curRowNumber - 1; //  The enemy in last row will be chosen to fire
+
         transform.GetChild(col).GetChild(row).GetComponent<EnemyController>().Invoke("isChosenToFire", 0f);
     }
 }
