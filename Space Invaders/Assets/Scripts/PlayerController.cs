@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public GameObject Bullet;
     public float movespeed = 10f;
     public static bool isFiring = false;
-    public static bool enemyIsFiring = false;
     public static bool isGameOver = false;
     public static int score = 0;
     public static int lives = 3;

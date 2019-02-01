@@ -4,28 +4,41 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public int points = 0;
-    public static bool isLowest = false;
-    public static bool isChosenToFire = false;
+    public int row = 1; // change others in component window
+    public int column = 0;
+    private int points = 40;
     public GameObject EnemyBullet;
 
-    void Update()
+    void Start()
     {
-        if (isChosenToFire)
-        {
-            Instantiate(EnemyBullet, this.transform.position + new Vector3(0, -1, 0), new Quaternion(0, 0, 0, 0));
-            isChosenToFire = false;
-        }
+        if (row == 2 || row == 3)
+            points = 20;
+        else if (row == 4 || row == 5)
+            points = 10;
+
+        string str = this.transform.parent.name;
+        if (str[str.Length - 1] == '0')
+            column = 10;
+        else if (str[str.Length - 1] == '1')
+            if (str[str.Length - 2] == '1')
+                column = 11;
+        column = str[str.Length - 1] - '0';
+        // get the column by the last character of name. If last character is 0 or 1, check the previous character.
     }
+    public void isChosenToFire()
+    {
+        Instantiate(EnemyBullet, this.transform.position + new Vector3(0, -1, 0), new Quaternion(0, 0, 0, 0));
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            EnemyFiringController.aliveEnemies[row - 1][column - 1] = false;
             PlayerController.score += points;
             Destroy(other.gameObject);
             Destroy(this.gameObject);
             PlayerController.isFiring = false;
-            
         }
         if (other.gameObject.CompareTag("RightBorder"))
         {

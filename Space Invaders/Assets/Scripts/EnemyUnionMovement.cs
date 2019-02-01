@@ -14,8 +14,7 @@ public class EnemyUnionMovement : MonoBehaviour
     {
         rbEnemies = this.transform.GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         timer += Time.deltaTime;

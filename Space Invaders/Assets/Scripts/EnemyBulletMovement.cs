@@ -8,10 +8,13 @@ public class EnemyBulletMovement : MonoBehaviour
     void Update()
     {
         this.transform.Translate(new Vector3(0, -1 * Time.deltaTime * bulletSpeed));
-        if (this.transform.position.y < -10)
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("LowerBorder"))
         {
             Destroy(this.gameObject);
-            PlayerController.enemyIsFiring = false;
         }
     }
 }
