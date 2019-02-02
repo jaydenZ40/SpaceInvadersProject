@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public static bool isGameOver = false;
     public static int score = 0;
     public static int lives = 3;
-    void Start()
+    void Awake()
     {
         rb = this.transform.GetComponent<Rigidbody2D>();
     }

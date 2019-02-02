@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     private int points = 40;
     public GameObject EnemyBullet;
 
-    void Start()
+    void Awake()
     {
         if (row == 2 || row == 3)
             points = 20;
@@ -34,7 +34,6 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            //EnemyFiringController.aliveEnemies[row - 1][column - 1] = false;
             PlayerController.score += points;
             Destroy(other.gameObject);
             if (this.transform.parent.childCount == 1)
