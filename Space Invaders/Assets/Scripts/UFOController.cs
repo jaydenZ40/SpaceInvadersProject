@@ -20,6 +20,7 @@ public class UFOController : MonoBehaviour
             Instantiate(UFO, new Vector3(-14.5f * direction, 7.5f, 0), Quaternion.identity);
             isFlying = true;
         }
+
     }
     
 }
