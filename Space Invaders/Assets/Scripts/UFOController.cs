@@ -11,7 +11,7 @@ public class UFOController : MonoBehaviour
     void Update()
     {
         int num = Random.Range(0, 600);  // sometimes a lot sometime nothing??
-        if (num == 0 && !isFlying)
+        if (num == 0 && !isFlying && (Time.timeScale == 1))
         {
             num = Random.Range(0, 2);
             if (num == 0)

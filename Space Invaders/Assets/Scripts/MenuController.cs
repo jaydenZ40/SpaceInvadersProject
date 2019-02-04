@@ -18,4 +18,8 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Resume()
+    {
+        this.GetComponent<PauseMenu>().Invoke("TogglePause", 0);
+    }
 }
