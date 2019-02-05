@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(2);
         }
         Physics2D.IgnoreLayerCollision(8, 9);  // ignore the collision between player and enemies
+        Physics2D.IgnoreLayerCollision(9, 11);  // ignore the collision between enemies and shields
     }
     void OnCollisionEnter2D(Collision2D other)
     {

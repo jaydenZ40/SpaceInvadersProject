@@ -50,11 +50,12 @@ public class Shield : MonoBehaviour
         {
             PlayerController.isFiring = false;
             IveBeenHit();
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
             IveBeenHit();
+            Destroy(other.gameObject);
         }
-        Destroy(other.gameObject);
     }
 }

@@ -18,7 +18,9 @@ public class EnemyUnionMovement : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        enemyMovespeed = 1 + timer / 40;
         if (timer % 0.7f < 0.35f)
+            //rbEnemies.velocity = new Vector2(moveDirection * Time.deltaTime * enemyMovespeed, 0);
             rbEnemies.transform.Translate(new Vector2(moveDirection * Time.deltaTime * enemyMovespeed, 0));
         if (moveDown)
         {
@@ -28,8 +30,12 @@ public class EnemyUnionMovement : MonoBehaviour
 
         if (rbEnemies.transform.childCount == 0)
         {
-            //SceneManager.LoadScene(1); // for extra credit
-            SceneManager.LoadScene(3);
+            int tempScore = PlayerController.score;
+            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(3); // for original version
+            rbEnemies.transform.position -= new Vector3(0, 1, 0);
+            PlayerController.score = tempScore;
+            PlayerController.lives++;
         }
 
     }
