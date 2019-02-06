@@ -6,8 +6,11 @@ using TMPro;
 public class UFOmovement : MonoBehaviour
 {
     public float moveSpeed = 7;
-    public TextMeshProUGUI UFOscore;
-    private float timer = 0;
+
+    void Start()
+    {
+        
+    }
     void Update()
     {
         this.transform.Translate(new Vector2(UFOController.direction * Time.deltaTime * moveSpeed, 0));
@@ -18,17 +21,14 @@ public class UFOmovement : MonoBehaviour
         {
             int point = 50 * Random.Range(2, 7);
             PlayerController.score += point;
-            Instantiate(UFOscore, this.transform.position, Quaternion.identity); // wrong position??
-            UFOscore.text = point.ToString();
-            Invoke("destroyScore", 3f);
             Destroy(other.gameObject);
             PlayerController.isFiring = false;
+            UFOkillScore.points = point;
+            UFOkillScore.UFOisKilled = true;
+            UFOkillScore.UFOPosition = this.transform.position;
         }
+        // for any collisions include the bullet:
         Destroy(this.gameObject);
         UFOController.isFlying = false;
-    }
-    void destroyScore()
-    {
-        Destroy(UFOscore);
     }
 }

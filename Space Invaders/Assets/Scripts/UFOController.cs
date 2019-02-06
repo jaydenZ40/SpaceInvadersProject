@@ -10,7 +10,7 @@ public class UFOController : MonoBehaviour
 
     void Update()
     {
-        int num = Random.Range(0, 600);  // sometimes a lot sometime nothing??
+        int num = Random.Range(0, 1000);
         if (num == 0 && !isFlying && (Time.timeScale == 1))
         {
             num = Random.Range(0, 2);

@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isFiring)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) && !isFiring)
         {
             Instantiate(Bullet, rb.transform.position + new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0));
             isFiring = true;

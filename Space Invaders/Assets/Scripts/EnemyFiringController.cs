@@ -16,7 +16,6 @@ public class EnemyFiringController : MonoBehaviour
         {
             randomFire();
             nextFire += Random.Range(0, fireInterval);
-            print(fireInterval);
         }
     }
     void randomFire()

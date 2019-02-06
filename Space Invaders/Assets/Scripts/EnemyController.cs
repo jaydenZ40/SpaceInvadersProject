@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public int row = 1; // change others in component window
+    public int row = 1; // changed others' row in component window
     public int column = 0;
     private int points = 40;
     public GameObject EnemyBullet;
