@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     public int column = 0;
     private int points = 40;
     public GameObject EnemyBullet;
+    public List<Sprite> sprites = new List<Sprite>();
+    private SpriteRenderer mySprite;
 
     void Awake()
     {
@@ -24,6 +26,8 @@ public class EnemyController : MonoBehaviour
             if (str[str.Length - 2] == '1')
                 column = 11;
         // get the column by the last character of name. If last character is 0 or 1, check the previous character.
+
+        mySprite = GetComponent<SpriteRenderer>();
     }
     public void isChosenToFire()
     {
@@ -57,5 +61,10 @@ public class EnemyController : MonoBehaviour
         {
             PlayerController.isGameOver = true;
         }
+    }
+
+    private void Update()
+    {
+            mySprite.sprite = sprites[EnemyUnionMovement.step];
     }
 }

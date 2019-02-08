@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2263485518160573901}
   - component: {fileID: 3894434701581313675}
   m_Layer: 9
-  m_Name: enemyRow5 (1)
+  m_Name: enemyRow5
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3844998679342878347}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9999, y: 0, z: 9.966958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.966958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9a72e3cf59bd76f4ebd97e99f24df96a, type: 3}
+  m_Sprite: {fileID: 21300010, guid: 6e208601e7e16084892a3031b5776239, type: 3}
   m_Color: {r: 0.43499184, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +97,9 @@ MonoBehaviour:
   column: 0
   EnemyBullet: {fileID: 8357396490305512463, guid: 5cb9d5b1dde73dc4f8f94e911b84d8ca,
     type: 3}
+  sprites:
+  - {fileID: 21300008, guid: 6e208601e7e16084892a3031b5776239, type: 3}
+  - {fileID: 21300010, guid: 6e208601e7e16084892a3031b5776239, type: 3}
 --- !u!61 &3894434701581313675
 BoxCollider2D:
   m_ObjectHideFlags: 0
