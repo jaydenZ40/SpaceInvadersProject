@@ -9,7 +9,6 @@ public class Shield : MonoBehaviour
     private SpriteRenderer mySprite;
     public Sprite[] sprites;
 
-    // Start is called before the first frame update
     void Start()
     {
         mySprite = GetComponent<SpriteRenderer>();

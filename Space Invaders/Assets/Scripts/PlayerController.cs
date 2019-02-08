@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
                 isGameOver = true;
             }
             Destroy(other.gameObject);
-            rb.transform.position = new Vector3(0, -8.5f, 0);
+            rb.transform.position = new Vector3(0, -9f, 0);
         }
     }
 }
