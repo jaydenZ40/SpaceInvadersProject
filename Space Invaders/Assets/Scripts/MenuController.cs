@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
         PlayerController.score = 0;
         PlayerController.lives = 3;
         PlayerController.isGameOver = false;
+        PlayerController.isFiring = false;
         EnemyUnionMovement.levelNum = 1;
         SceneManager.LoadScene(1);
     }
